@@ -1,0 +1,6 @@
+services:
+  tailwind:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
