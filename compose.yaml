@@ -1,6 +1,12 @@
 services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/share/nginx/html:ro
+
   tailwind:
     build: .
     volumes:
       - .:/app
-      - /app/node_modules
