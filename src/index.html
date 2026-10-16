@@ -6,18 +6,45 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Nordeste Camp</title>
     <link rel='stylesheet' href='output.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-orange-500 to-orange-700">
-    <header>
-        <h1>Nordeste Camp</h1>
-        <p1>Aqui as suas partidas viram grandes eventos!</p1>
-        <nav>
-            <li><a href='index.html'>Início</a></li>
-            <li><a href='competicoes.html'>Competições</a></li>
-            <li><a href='classificacao.html'>Classificação</a></li>
-            <li><a href='#contato'>Contato</a></li>
-        </nav>
+<body
+    class="min-h-screen flex flex-col bg-gradient-to-b from-orange-500 to-orange-700 font-sans text-white antialiased selection:bg-orange-300 selection:text-orange-950">
+    <header class="w-full bg-orange-950/40 backdrop-blur-md border-b border-white/10 p-6">
+        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white drop-shadow-md">
+                    Nordeste Camp
+                </h1>
+                <p class="text-orange-200 text-sm font-medium mt-1">
+                    Aqui as suas partidas viram grandes eventos!
+                </p>
+            </div>
+            <nav>
+                <ul class="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+                    <li>
+                        <a href="index.html"
+                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Início</a>
+                    </li>
+                    <li>
+                        <a href="competicoes.html"
+                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Competições</a>
+                    </li>
+                    <li>
+                        <a href="classificacao.html"
+                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Classificação</a>
+                    </li>
+                    <li>
+                        <a href="#contato"
+                            class="bg-orange-600 hover:bg-orange-800 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors shadow-md">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
     <section id="quem-somos">
         <h2>Quem Somos?</h2>
@@ -49,34 +76,42 @@
             </div>
         </div>
     </section>
+    <!---
+    Talvez eu remova, mas vamos ver se fica bom essa parte de classificação
+    -->
     <section id="classificacao">
-        <h2>Classificação</h2>
-        <p>A classificação é feita através de um sistema de pontos, onde cada vitória vale 3 pontos,
-            e cada derrota vale 0 pontos. Em caso de empate, a equipe com mais vitórias é a campeã.
-        </p>
-        <footer id="contato" class="bg-orange-950/80 text-white p-6 mt-auto">
-        <div class="w-full flex flex-col gap-6">
-            <!-- Bloco Superior: Informações de Contato -->
-            <div
-                class="flex flex-col md:flex-row items-start justify-between gap-4 border-b border-orange-700/50 pb-4 text-center md:text-left">
-                <div>
-                    <h2 class="text-xl font-bold">Contato</h2>
-                    <p class="text-orange-200 text-sm">Entre em contato conosco através do e-mail:</p>
+        <article>
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-xl text-white mb-3">
+                <h2>Classificação</h2>
+                <p>A classificação é feita através de um sistema de pontos, onde cada vitória vale 3 pontos,
+                    e cada derrota vale 0 pontos. Em caso de empate, a equipe com mais vitórias é a campeã.
+                </p>
+            </div>
+        </article>
+        <!--aqui é o obvio, preciso nem dizer-->
+        <footer id="contato" class="bg-orange-950/90 text-white p-6 mt-auto w-full">
+            <div class="w-full flex flex-col gap-6">
+                <!-- Bloco Superior: Informações de Contato -->
+                <div
+                    class="flex flex-col md:flex-row items-start justify-between gap-4 border-b border-orange-700/50 pb-4 text-center md:text-left">
+                    <div>
+                        <h2 class="text-xl font-bold">Contato</h2>
+                        <p class="text-orange-200 text-sm">Entre em contato conosco através do e-mail:</p>
+                    </div>
+                    <a href="mailto:contato@nordestecamp.com.br"
+                        class="bg-orange-600 hover:bg-orange-800 text-white font-medium px-4 py-2 rounded-lg transition-colors">
+                        contato@nordestecamp.com.br
+                    </a>
                 </div>
-                <a href="mailto:contato@nordestecamp.com.br"
-                    class="bg-orange-600 hover:bg-orange-500 text-white font-medium px-4 py-2 rounded-lg transition-colors">
-                    contato@nordestecamp.com.br
-                </a>
+                <!-- Bloco Inferior: Direitos Autorais -->
+                <div
+                    class="flex flex-col md:flex-row items-start justify-between gap-2 text-sm text-orange-200/80 text-center md:text-left">
+                    <p>© 2026 Nordeste Camp. Todos os direitos reservados.</p>
+                    <p>Desenvolvido por <a href="https://github.com/nordestecamp"
+                            class="text-orange-300 hover:underline">Equipe Nordeste Camp</a></p>
+                </div>
             </div>
-            <!-- Bloco Inferior: Direitos Autorais -->
-            <div
-                class="flex flex-col md:flex-row items-start justify-between gap-2 text-sm text-orange-200/80 text-center md:text-left">
-                <p>© 2026 Nordeste Camp. Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://github.com/nordestecamp"
-                        class="text-orange-300 hover:underline">Equipe Nordeste Camp</a></p>
-            </div>
-        </div>
-    </footer>
+        </footer>
         <script src="./script.js" defer></script>
 </body>
 
