@@ -203,6 +203,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-full {
+    width: 100%;
+  }
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
@@ -214,6 +217,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
