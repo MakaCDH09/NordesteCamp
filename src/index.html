@@ -26,16 +26,16 @@
             <nav>
                 <ul class="flex flex-wrap items-center justify-center gap-2 md:gap-3">
                     <li>
-                        <a href="index.html"
-                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Início</a>
+                        <a href="index.html" aria-current="page"
+                            class="relative px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10 after:absolute after:right-4 after:bottom-1 after:left-4 after:h-0.5 after:origin-left after:scale-x-100 after:bg-white after:transition-transform">Início</a>
                     </li>
                     <li>
                         <a href="competicoes.html"
-                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Competições</a>
+                            class="relative px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10 after:absolute after:right-4 after:bottom-1 after:left-4 after:h-0.5 after:origin-left after:scale-x-0 after:bg-white after:transition-transform hover:after:scale-x-100 focus-visible:after:scale-x-100">Competições</a>
                     </li>
                     <li>
                         <a href="classificacao.html"
-                            class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10">Classificação</a>
+                            class="relative px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:bg-white/10 after:absolute after:right-4 after:bottom-1 after:left-4 after:h-0.5 after:origin-left after:scale-x-0 after:bg-white after:transition-transform hover:after:scale-x-100 focus-visible:after:scale-x-100">Classificação</a>
                     </li>
                     <li>
                         <a href="#contato"
@@ -61,9 +61,9 @@
         <p> As partidas são divididas em dois tipos diferentes, os em equipe
             de 5 jogadores, e os individuais, onde cada jogador joga por si só.
         </p>
-        <a href="competicoes.html" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
-            Escolha
-            aqui a sua modalidade de Competições! </a>
+        <a href="competicoes.html" class="inline-flex max-w-full items-center justify-center rounded bg-purple-600 px-4 py-2 text-center font-bold text-white transition-colors hover:bg-purple-700 mt-5 mb-4">
+            Escolha aqui a sua modalidade de Competições!
+        </a>
         <div class="max-w-4xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl text-white">
                 <h3 class="text-2xl font-bold mb-3">Competições em Equipe</h3>
@@ -85,8 +85,8 @@
         <article>
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-xl text-white mb-3">
                 <h2>Classificação</h2>
-                <p>A classificação é feita através de um sistema de pontos, onde cada vitória vale 3 pontos,
-                    e cada derrota vale 0 pontos. Em caso de empate, a equipe com mais vitórias é a campeã.
+                <p>A pontuação considera 3 pontos por vitória, 1 por empate e 0 por derrota. Ao final das seis rodadas,
+                    a equipe com 4 a 6 vitórias é Campeã, com 2 a 3 é Competitiva e com 0 a 1 fica Em treinamento.
                 </p>
             </div>
         </article>
