@@ -42,6 +42,116 @@
 
         </div>
     </header>
+    <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6">
+        <section aria-labelledby="competicoes-titulo">
+            <div class="mb-8 border-b border-white/15 pb-7">
+                <p class="text-sm font-bold uppercase tracking-widest text-cyan-200">Nordeste Camp · Temporada 2026</p>
+                <div class="mt-3 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+                    <div>
+                        <h2 id="competicoes-titulo" class="text-4xl font-black tracking-tight sm:text-5xl">Competições</h2>
+                        <p class="mt-3 max-w-2xl text-base text-white/75">Encontre seu próximo desafio, em equipe ou no mano a mano.</p>
+                    </div>
+                    <a href="mailto:contato@nordestecamp.com.br?subject=Interesse%20em%20competi%C3%A7%C3%B5es"
+                        class="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-cyan-300 px-5 py-3 font-bold text-slate-950 transition-colors hover:bg-cyan-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200">
+                        Tenho interesse <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <p class="mt-5 border-l-2 border-amber-300 pl-3 text-sm text-white/70">Calendário e torneios abaixo são demonstrativos; consulte a organização para datas e inscrições oficiais.</p>
+            </div>
+
+            <form class="mb-6 grid gap-4 border-b border-white/15 pb-6 sm:grid-cols-2 lg:grid-cols-4" data-competition-filters>
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <label for="competition-search" class="mb-1.5 block text-sm font-semibold text-white/80">Buscar</label>
+                    <input id="competition-search" type="search" placeholder="Nome ou jogo"
+                        class="min-h-11 w-full rounded-lg border border-white/20 bg-slate-950/50 px-3 text-white placeholder:text-white/45 focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/30"
+                        data-filter-search>
+                </div>
+                <div>
+                    <label for="competition-mode" class="mb-1.5 block text-sm font-semibold text-white/80">Modalidade</label>
+                    <select id="competition-mode" class="min-h-11 w-full rounded-lg border border-white/20 bg-slate-950 px-3 text-white focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/30" data-filter-mode>
+                        <option value="all">Todas</option>
+                        <option value="team">Equipe</option>
+                        <option value="solo">Individual</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="competition-game" class="mb-1.5 block text-sm font-semibold text-white/80">Jogo</label>
+                    <select id="competition-game" class="min-h-11 w-full rounded-lg border border-white/20 bg-slate-950 px-3 text-white focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/30" data-filter-game>
+                        <option value="all">Todos os jogos</option>
+                        <option value="valorant">VALORANT</option>
+                        <option value="street-fighter-6">Street Fighter 6</option>
+                        <option value="counter-strike-2">Counter-Strike 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="competition-status" class="mb-1.5 block text-sm font-semibold text-white/80">Situação</label>
+                    <select id="competition-status" class="min-h-11 w-full rounded-lg border border-white/20 bg-slate-950 px-3 text-white focus:border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300/30" data-filter-status>
+                        <option value="all">Todas</option>
+                        <option value="open">Inscrições abertas</option>
+                        <option value="live">Em andamento</option>
+                        <option value="closed">Encerrada</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="mb-4 flex items-center justify-between gap-3">
+                <p class="text-sm text-white/70" aria-live="polite"><span data-competition-count>3</span> competições</p>
+                <a href="classificacao.html" class="text-sm font-semibold text-cyan-200 underline decoration-cyan-200/50 underline-offset-4 hover:text-white">Ver classificação <span aria-hidden="true">→</span></a>
+            </div>
+
+            <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-competition-list>
+                <li data-competition data-mode="team" data-game="valorant" data-status="open" data-search="copa nordeste fps valorant equipe">
+                    <article class="flex h-full flex-col border-t-2 border-emerald-300 bg-white/[0.07] p-5 transition-colors hover:bg-white/[0.11]">
+                        <div class="flex items-start justify-between gap-3">
+                            <p class="text-xs font-bold uppercase tracking-widest text-cyan-200">FPS · VALORANT</p>
+                            <span class="shrink-0 rounded-full bg-emerald-300/15 px-2.5 py-1 text-xs font-bold text-emerald-200">Inscrições abertas</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-extrabold">Copa Nordeste FPS</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/70">Monte seu elenco e dispute uma temporada de confrontos táticos.</p>
+                        <dl class="mt-5 grid grid-cols-2 gap-3 border-y border-white/10 py-4 text-sm">
+                            <div><dt class="text-white/55">Formato</dt><dd class="mt-1 font-semibold">Equipe · 5 jogadores</dd></div>
+                            <div><dt class="text-white/55">Etapas</dt><dd class="mt-1 font-semibold">6 rodadas</dd></div>
+                            <div class="col-span-2"><dt class="text-white/55">Próxima partida</dt><dd class="mt-1 font-semibold">Calendário a anunciar</dd></div>
+                        </dl>
+                        <a href="mailto:contato@nordestecamp.com.br?subject=Inscri%C3%A7%C3%A3o%20-%20Copa%20Nordeste%20FPS" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 font-bold text-cyan-200 hover:text-white">Consultar inscrição <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+                <li data-competition data-mode="solo" data-game="street-fighter-6" data-status="live" data-search="duelos street fighter 6 individual luta">
+                    <article class="flex h-full flex-col border-t-2 border-amber-300 bg-white/[0.07] p-5 transition-colors hover:bg-white/[0.11]">
+                        <div class="flex items-start justify-between gap-3">
+                            <p class="text-xs font-bold uppercase tracking-widest text-cyan-200">Luta · Street Fighter 6</p>
+                            <span class="shrink-0 rounded-full bg-amber-300/15 px-2.5 py-1 text-xs font-bold text-amber-100">Em andamento</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-extrabold">Duelo</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/70">Confrontos individuais em chave eliminatória. Cada round conta.</p>
+                        <dl class="mt-5 grid grid-cols-2 gap-3 border-y border-white/10 py-4 text-sm">
+                            <div><dt class="text-white/55">Formato</dt><dd class="mt-1 font-semibold">Individual · 1v1</dd></div>
+                            <div><dt class="text-white/55">Etapas</dt><dd class="mt-1 font-semibold">Chave eliminatória</dd></div>
+                            <div class="col-span-2"><dt class="text-white/55">Próxima partida</dt><dd class="mt-1 font-semibold">Agenda a anunciar</dd></div>
+                        </dl>
+                        <a href="classificacao.html#duelos" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 font-bold text-cyan-200 hover:text-white">Ver classificação individual <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+                <li data-competition data-mode="team" data-game="counter-strike-2" data-status="closed" data-search="arena nordeste counter-strike 2 cs2 equipe">
+                    <article class="flex h-full flex-col border-t-2 border-white/30 bg-white/[0.07] p-5 transition-colors hover:bg-white/[0.11]">
+                        <div class="flex items-start justify-between gap-3">
+                            <p class="text-xs font-bold uppercase tracking-widest text-cyan-200">FPS · Counter-Strike 2</p>
+                            <span class="shrink-0 rounded-full bg-white/10 px-2.5 py-1 text-xs font-bold text-white/70">Encerrada</span>
+                        </div>
+                        <h3 class="mt-5 text-2xl font-extrabold">Arena Nordeste</h3>
+                        <p class="mt-2 text-sm leading-6 text-white/70">Disputa por equipes em mapas clássicos e partidas decisivas.</p>
+                        <dl class="mt-5 grid grid-cols-2 gap-3 border-y border-white/10 py-4 text-sm">
+                            <div><dt class="text-white/55">Formato</dt><dd class="mt-1 font-semibold">Equipe · 5 jogadores</dd></div>
+                            <div><dt class="text-white/55">Etapas</dt><dd class="mt-1 font-semibold">Fase de grupos</dd></div>
+                            <div class="col-span-2"><dt class="text-white/55">Próxima edição</dt><dd class="mt-1 font-semibold">Em breve</dd></div>
+                        </dl>
+                        <a href="mailto:contato@nordestecamp.com.br?subject=Interesse%20na%20pr%C3%B3xima%20Arena%20Nordeste" class="mt-auto inline-flex min-h-11 items-center gap-2 pt-5 font-bold text-cyan-200 hover:text-white">Receber novidades <span aria-hidden="true">→</span></a>
+                    </article>
+                </li>
+            </ul>
+            <p class="hidden border border-white/15 px-5 py-8 text-center text-white/70" data-competition-empty>Nenhuma competição encontrada. Tente ajustar os filtros.</p>
+        </section>
+    </main>
     <footer id="contato" class="bg-purple-950/80 text-white p-6 mt-auto">
         <div class="w-full flex flex-col gap-6">
             <!-- Bloco Superior: Informações de Contato -->
