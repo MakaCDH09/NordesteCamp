@@ -131,3 +131,4 @@ if (formularioFiltros) {
 	formularioFiltros.addEventListener("input", atualizarCompeticoes);
 	formularioFiltros.addEventListener("change", atualizarCompeticoes);
 }
+console.log("O JavaScript está funcionando!");
