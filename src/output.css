@@ -258,6 +258,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-auto {
     margin-top: auto;
   }
@@ -465,6 +468,12 @@
     border-color: color-mix(in srgb, #fff 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
+  .border-white\/25 {
+    border-color: color-mix(in srgb, #fff 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 25%, transparent);
     }
   }
   .border-white\/30 {
@@ -703,6 +712,10 @@
     --tw-leading: calc(var(--spacing) * 6);
     line-height: calc(var(--spacing) * 6);
   }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+  }
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
@@ -777,6 +790,12 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .text-white\/50 {
+    color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
   }
   .text-white\/55 {
     color: color-mix(in srgb, #fff 55%, transparent);
@@ -995,6 +1014,9 @@
   .focus-visible\:outline-cyan-200:focus-visible {
     outline-color: var(--color-cyan-200);
   }
+  .focus-visible\:outline-white:focus-visible {
+    outline-color: var(--color-white);
+  }
   .focus-visible\:after\:scale-x-100:focus-visible::after {
     content: var(--tw-content);
     --tw-scale-x: 100%;
@@ -1021,6 +1043,9 @@
     }
     .sm\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .sm\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));

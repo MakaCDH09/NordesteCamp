@@ -1,60 +1,91 @@
-// Reúne as partidas da página de classificação para calcular os resultados da equipe.
+// Calcula a classificação parcial com os placares confirmados do torneio por equipes.
 const partidas = [...document.querySelectorAll("[data-match]")];
 
 if (partidas.length > 0) {
-	// Guarda a soma dos pontos e a quantidade de vitórias durante o cálculo.
-	let pontosTotais = 0;
-	let vitorias = 0;
+	const linhasEquipes = [...document.querySelectorAll("[data-team-standing]")];
+	const estatisticasEquipes = new Map(
+		linhasEquipes.map((linha) => [
+			linha.dataset.teamStanding,
+			{ played: 0, wins: 0, draws: 0, losses: 0, points: 0 },
+		]),
+	);
+	const equipeNordeste = estatisticasEquipes.get("Nordeste Camp");
+	let placaresInformados = 0;
 
 	for (const partida of partidas) {
-		// Lê os placares configurados nos atributos data-team-score e data-opponent-score.
 		const placarEquipe = Number(partida.dataset.teamScore);
 		const placarAdversario = Number(partida.dataset.opponentScore);
+		const adversario = estatisticasEquipes.get(partida.dataset.opponentTeam);
 		const elementoResultado = partida.querySelector("[data-match-result]");
 		const elementoPlacar = partida.querySelector("[data-score-display]");
 
-		// Ignora a pontuação se algum placar não for um número válido.
-		if (!Number.isFinite(placarEquipe) || !Number.isFinite(placarAdversario)) {
+		if (!Number.isFinite(placarEquipe) || !Number.isFinite(placarAdversario) || !adversario) {
 			elementoResultado.textContent = "Placar inválido";
 			continue;
 		}
 
-		// Atualiza o placar visível e sua descrição para leitores de tela.
+		placaresInformados += 1;
 		elementoPlacar.textContent = `${placarEquipe} – ${placarAdversario}`;
-		elementoPlacar.setAttribute("aria-label", `Nordeste Camp ${placarEquipe}, adversário ${placarAdversario}`);
+		elementoPlacar.setAttribute(
+			"aria-label",
+			`Nordeste Camp ${placarEquipe}, ${partida.dataset.opponentTeam} ${placarAdversario}`,
+		);
+		equipeNordeste.played += 1;
+		adversario.played += 1;
 
-		// Aplica a regra de pontuação: vitória vale 3 pontos, empate vale 1.
 		if (placarEquipe > placarAdversario) {
-			vitorias += 1;
-			pontosTotais += 3;
+			equipeNordeste.wins += 1;
+			equipeNordeste.points += 3;
+			adversario.losses += 1;
 			elementoResultado.textContent = "Vitória · 3 pontos";
 			elementoResultado.classList.add("bg-emerald-950/70", "text-emerald-100");
-		} else if (placarEquipe === placarAdversario) {
-			pontosTotais += 1;
-			elementoResultado.textContent = "Empate · 1 ponto";
-			elementoResultado.classList.add("bg-amber-950/70", "text-amber-100");
-		} else {
+		} else if (placarEquipe < placarAdversario) {
+			equipeNordeste.losses += 1;
+			adversario.wins += 1;
+			adversario.points += 3;
 			elementoResultado.textContent = "Derrota · 0 pontos";
 			elementoResultado.classList.add("bg-rose-950/70", "text-rose-100");
+		} else {
+			equipeNordeste.draws += 1;
+			equipeNordeste.points += 1;
+			adversario.draws += 1;
+			adversario.points += 1;
+			elementoResultado.textContent = "Empate · 1 ponto";
+			elementoResultado.classList.add("bg-amber-950/70", "text-amber-100");
 		}
 	}
 
-	// Calcula a média de pontos e define a categoria conforme o total de vitórias.
-	const partidasConcluidas = partidas.length;
-	const mediaPontos = partidasConcluidas === 0 ? 0 : pontosTotais / partidasConcluidas;
-	let classificacao = "Em treinamento";
+	linhasEquipes.forEach((linha) => {
+		const estatisticas = estatisticasEquipes.get(linha.dataset.teamStanding);
+		for (const celula of linha.querySelectorAll("[data-team-stat]")) {
+			celula.textContent = estatisticas[celula.dataset.teamStat];
+		}
+		linha.querySelector("[data-team-mobile-stats]").textContent =
+			`${estatisticas.played}J · ${estatisticas.wins}V · ${estatisticas.draws}E · ${estatisticas.losses}D`;
+	});
+	document.querySelector("[data-reported-fixtures]").textContent = placaresInformados;
 
-	if (vitorias >= 4) {
-		classificacao = "Campeã";
-	} else if (vitorias >= 2) {
-		classificacao = "Competitiva";
+	const resultadoIndividual = document.querySelector('[data-campaign-team="Nordeste Camp"]');
+	const partidasIndividuais = Number(resultadoIndividual?.dataset.matches ?? 0);
+	const vitoriasIndividuais = Number(resultadoIndividual?.dataset.wins ?? 0);
+	const pontosIndividuais = Number(resultadoIndividual?.dataset.points ?? 0);
+	const mediaPontosEquipe = equipeNordeste.played === 0 ? 0 : equipeNordeste.points / equipeNordeste.played;
+	let classificacaoEquipe = "Em treinamento";
+
+	if (equipeNordeste.wins >= 4) {
+		classificacaoEquipe = "Campeã";
+	} else if (equipeNordeste.wins >= 2) {
+		classificacaoEquipe = "Competitiva";
 	}
 
-	// Exibe os valores calculados nos campos de resumo da classificação.
-	document.querySelector("[data-total-points]").textContent = pontosTotais;
-	document.querySelector("[data-points-average]").textContent = mediaPontos.toFixed(1);
-	document.querySelector("[data-win-count]").textContent = vitorias;
-	document.querySelector("[data-team-classification]").textContent = classificacao;
+	document.querySelector("[data-team-points]").textContent = equipeNordeste.points;
+	document.querySelector("[data-team-wins]").textContent = equipeNordeste.wins;
+	document.querySelector("[data-team-matches]").textContent = equipeNordeste.played;
+	document.querySelector("[data-team-average]").textContent = mediaPontosEquipe.toFixed(1);
+	document.querySelector("[data-team-classification]").textContent = classificacaoEquipe;
+	document.querySelector("[data-solo-points]").textContent = pontosIndividuais;
+	document.querySelector("[data-solo-wins]").textContent = vitoriasIndividuais;
+	document.querySelector("[data-solo-matches]").textContent = partidasIndividuais;
 }
 
 // Procura o formulário de filtros; ele só existe na página de competições.
@@ -75,7 +106,7 @@ if (formularioFiltros) {
 
 	// Compara cada cartão com todos os filtros e atualiza a lista exibida.
 	const atualizarCompeticoes = () => {
-		const termoBusca = campoBusca.value.trim().toLocaleLowerCase("pt-BR");
+		const termoBusca = campoBusca.value.trim().toLocaleLowerCase();
 		let quantidadeVisivel = 0;
 
 		for (const cartao of cartoesCompeticao) {

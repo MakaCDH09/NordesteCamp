@@ -46,18 +46,18 @@
 
         </div>
     </header>
-    <section id="quem-somos">
+    <main class="flex-1">
+    <section id="quem-somos" aria-labelledby="quem-somos-titulo">
         <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-xl text-white mb-3">
-        <h2 class="text-2xl md:text-3xl border-l-4 font-extrabold bg-gradient-to-r from-purple-300 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent drop-shadow-sm mb-3">Quem Somos?</h2>
-        <p class="text-white/80">Somos a maior organização de campeonatos de jogos eletrônicos do nordeste brasileiro.
+        <h2 id="quem-somos-titulo" class="text-2xl md:text-3xl border-l-4 font-extrabold bg-gradient-to-r from-purple-300 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent drop-shadow-sm mb-3">Quem Somos?</h2>
+        <p class="text-white/80">Somos uma organização dedicada a campeonatos de jogos eletrônicos no Nordeste.
             Focamos tanto em jogos de FPS quanto em Fighting Games,
             e estamos sempre buscando novas formas de melhorar a experiência dos nossos jogadores e espectadores.
         </p>
         </div>
     </section>
-    <!--essa section aí debaixo vai servir para explicar as competições-->
-    <section id="competicoes">
-        <h2>Competições</h2>
+    <section id="competicoes" aria-labelledby="competicoes-titulo">
+        <h2 id="competicoes-titulo">Competições</h2>
         <p> As partidas são divididas em dois tipos diferentes, os em equipe
             de 5 jogadores, e os individuais, onde cada jogador joga por si só.
         </p>
@@ -67,31 +67,27 @@
         <div class="max-w-4xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl text-white">
                 <h3 class="text-2xl font-bold mb-3">Competições em Equipe</h3>
-                <p>As competiçõs em equipe são realizadas com um total de 5 jogadores por
-                    equipe, e 6 rodadas, onde cada equipe joga contra todas as outras equipes,
-                    e a equipe com mais vitórias ao final das 6 rodadas é a campeã.
+                <p>O torneio reúne 4 equipes com 5 jogadores cada em 6 rodadas. São duas partidas por rodada, e cada equipe enfrenta as outras três uma vez no primeiro turno e novamente no returno. A equipe com mais vitórias ao final é a campeã.
                 </p>
             </div>
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl text-white">
                 <h3 class="text-2xl font-bold mb-3">Competições Individuais</h3>
-                <p>Assim como as competições em equipe, são um total de 6 rodadas, onde cada jogador compete entre si, quem fizer mais pontos vence.</p>
+                <p>As disputas individuais reúnem 4 jogadores em 6 rodadas. Cada jogador enfrenta os outros três duas vezes, e vence quem somar mais pontos.</p>
             </div>
         </div>
     </section>
-    <!---
-    Talvez eu remova, mas vamos ver se fica bom essa parte de classificação
-    -->
-    <section id="classificacao">
+    <section id="classificacao" aria-labelledby="classificacao-titulo">
         <article>
             <div class=" max-w-2xl mx-auto md:grid-cols-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 shadow-xl text-white mb-3">
-                <h2 class="text-2xl font-bold mb-3">Classificação</h2>
+                <h2 id="classificacao-titulo" class="text-2xl font-bold mb-3">Classificação</h2>
                 <p>A pontuação considera 3 pontos por vitória, 1 por empate e 0 por derrota. Ao final das seis rodadas,
                     a equipe com 4 a 6 vitórias é Campeã, com 2 a 3 é Competitiva e com 0 a 1 fica Em treinamento.
                 </p>
             </div>
         </article>
-        <!--aqui é o obvio, preciso nem dizer-->
-        <footer id="contato" class="bg-purple-950/90 text-white p-6 mt-auto w-full">
+    </section>
+    </main>
+    <footer id="contato" class="bg-purple-950/90 text-white p-6 mt-auto w-full">
             <div class="w-full flex flex-col gap-6">
                 <!-- Bloco Superior: Informações de Contato -->
                 <div
@@ -113,8 +109,8 @@
                             class="text-purple-300 hover:underline">Equipe Nordeste Camp</a></p>
                 </div>
             </div>
-        </footer>
-        <script src="./script.js" defer></script>
+    </footer>
+    <script src="./script.js" defer></script>
 </body>
 
 </html>

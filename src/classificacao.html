@@ -53,17 +53,16 @@
             <section id="torneio-equipes" aria-labelledby="tabela-titulo" class="mb-10 scroll-mt-6">
                 <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
                     <div>
-                        <h3 id="tabela-titulo" class="text-xl font-bold">Torneio por equipes</h3>
-                        <p class="mt-1 text-sm text-white/65">Pontuação: vitória = 3, empate = 1, derrota = 0.</p>
+                        <h3 id="tabela-titulo" class="text-xl font-bold">Resultados parciais por equipe</h3>
+                        <p class="mt-1 text-sm text-white/65"><span data-reported-fixtures>--</span> partidas do Nordeste Camp consideradas.</p>
                     </div>
-                    <span class="border-l-2 border-amber-300 pl-3 text-sm text-white/65">Tabela demonstrativa</span>
+                    <span class="border-l-2 border-amber-300 pl-3 text-sm text-white/65">Dados demonstrativos</span>
                 </div>
                 <div class="border-y border-white/15">
                     <table class="w-full table-fixed text-left text-sm">
-                        <caption class="sr-only">Classificação demonstrativa do torneio por equipes</caption>
+                        <caption class="sr-only">Resultados parciais das quatro equipes com base nas partidas do Nordeste Camp</caption>
                         <thead class="border-b border-white/15 bg-white/[0.06] text-xs uppercase tracking-wider text-white/65">
                             <tr>
-                                <th scope="col" class="w-12 px-2 py-3 sm:w-16 sm:px-4">Pos.</th>
                                 <th scope="col" class="px-2 py-3 sm:px-4">Equipe</th>
                                 <th scope="col" class="hidden px-4 py-3 text-center sm:table-cell">J</th>
                                 <th scope="col" class="hidden px-4 py-3 text-center sm:table-cell">V</th>
@@ -73,41 +72,37 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-white/10">
-                            <tr class="bg-cyan-300/[0.08]">
-                                <td class="px-2 py-4 font-bold text-cyan-200 sm:px-4">1</td>
-                                <th scope="row" class="px-2 py-4 font-bold sm:px-4">Nordeste Camp <span class="ml-1 text-xs font-semibold text-cyan-200 sm:ml-2"></span><span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">5V · 0E · 1D</span></th>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">5</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">0</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">1</td>
-                                <td class="px-2 py-4 text-right text-lg font-extrabold sm:px-4">15</td>
+                            <tr class="bg-cyan-300/[0.08]" data-team-standing="Nordeste Camp">
+                                <th scope="row" class="px-2 py-4 font-bold sm:px-4">Nordeste Camp<span data-team-mobile-stats class="mt-1 block text-xs font-normal text-white/60 sm:hidden">Calculando...</span></th>
+                                <td data-team-stat="played" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="wins" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="draws" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="losses" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="points" class="px-2 py-4 text-right text-lg font-extrabold sm:px-4">--</td>
                             </tr>
-                            <tr>
-                                <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">2</td>
-                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Sertão Fighters<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">4V · 0E · 2D</span></th>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">0</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
-                                <td class="px-2 py-4 text-right font-bold sm:px-4">12</td>
+                            <tr data-team-standing="Sertão Fighters">
+                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Sertão Fighters<span data-team-mobile-stats class="mt-1 block text-xs font-normal text-white/60 sm:hidden">Calculando...</span></th>
+                                <td data-team-stat="played" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="wins" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="draws" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="losses" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="points" class="px-2 py-4 text-right font-bold sm:px-4">--</td>
                             </tr>
-                            <tr>
-                                <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">3</td>
-                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Bahia Titans<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">3V · 0E · 3D</span></th>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">3</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">0</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">3</td>
-                                <td class="px-2 py-4 text-right font-bold sm:px-4">9</td>
+                            <tr data-team-standing="Bahia Titans">
+                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Bahia Titans<span data-team-mobile-stats class="mt-1 block text-xs font-normal text-white/60 sm:hidden">Calculando...</span></th>
+                                <td data-team-stat="played" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="wins" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="draws" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="losses" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="points" class="px-2 py-4 text-right font-bold sm:px-4">--</td>
                             </tr>
-                            <tr>
-                                <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">4</td>
-                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Agreste Force<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">2V · 0E · 4D</span></th>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">0</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="px-2 py-4 text-right font-bold sm:px-4">6</td>
+                            <tr data-team-standing="Agreste Force">
+                                <th scope="row" class="px-2 py-4 font-semibold sm:px-4">Agreste Force<span data-team-mobile-stats class="mt-1 block text-xs font-normal text-white/60 sm:hidden">Calculando...</span></th>
+                                <td data-team-stat="played" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="wins" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="draws" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="losses" class="hidden px-4 py-4 text-center sm:table-cell">--</td>
+                                <td data-team-stat="points" class="px-2 py-4 text-right font-bold sm:px-4">--</td>
                             </tr>
                         </tbody>
                     </table>
@@ -115,27 +110,35 @@
             </section>
 
             <section aria-labelledby="resumo-titulo" class="mb-8 rounded-xl border border-white/15 bg-purple-950/50 p-5 shadow-lg">
-                <h3 id="resumo-titulo" class="text-xl font-bold">Campanha do Nordeste Camp</h3>
+                <h3 id="resumo-titulo" class="text-xl font-bold">Resumo do Nordeste Camp</h3>
                 <dl class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                     <div>
-                        <dt class="text-sm text-white/70">Pontos totais</dt>
-                        <dd class="mt-1 text-2xl font-extrabold"><span data-total-points>--</span></dd>
+                        <dt class="text-sm text-white/70">Pontos totais da equipe</dt>
+                        <dd class="mt-1 text-2xl font-extrabold"><span data-team-points>--</span></dd>
                     </div>
                     <div>
-                        <dt class="text-sm text-white/70">Média por partida</dt>
-                        <dd class="mt-1 text-2xl font-extrabold"><span data-points-average>--</span></dd>
+                        <dt class="text-sm text-white/70">Vitórias por equipe</dt>
+                        <dd class="mt-1 text-2xl font-extrabold"><span data-team-wins>--</span> de <span data-team-matches>--</span></dd>
                     </div>
                     <div>
-                        <dt class="text-sm text-white/70">Vitórias</dt>
-                        <dd class="mt-1 text-2xl font-extrabold"><span data-win-count>--</span> de 6</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm text-white/70">Categoria</dt>
+                        <dt class="text-sm text-white/70">Categoria da equipe</dt>
                         <dd class="mt-1 text-xl font-extrabold" data-team-classification aria-live="polite">Calculando...</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm text-white/70">Pontos individuais</dt>
+                        <dd class="mt-1 text-2xl font-extrabold"><span data-solo-points>--</span></dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm text-white/70">Vitórias individuais</dt>
+                        <dd class="mt-1 text-2xl font-extrabold"><span data-solo-wins>--</span> de <span data-solo-matches>--</span></dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm text-white/70">Média por rodada</dt>
+                        <dd class="mt-1 text-2xl font-extrabold"><span data-team-average>--</span></dd>
                     </div>
                 </dl>
                 <p class="mt-4 border-t border-white/15 pt-3 text-sm text-white/75">
-                    Pontuação: vitória = 3 pontos, empate = 1 ponto e derrota = 0 pontos. Categoria por vitórias: 4 a 6 = Campeã, 2 a 3 = Competitiva, 0 a 1 = Em treinamento.
+                    A pontuação e a média acima consideram somente as partidas por equipe. Vitória = 3 pontos, empate = 1 ponto e derrota = 0 pontos. Categoria: 4 a 6 vitórias = Campeã; 2 a 3 = Competitiva; 0 a 1 = Em treinamento.
                 </p>
             </section>
 
@@ -165,38 +168,38 @@
                         <tbody class="divide-y divide-white/10">
                             <tr class="bg-cyan-300/[0.08]">
                                 <td class="px-2 py-4 font-bold text-cyan-200 sm:px-4">1</td>
-                                <th scope="row" class="break-words px-2 py-4 font-bold sm:px-4">João Silva<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">4J · 4V · 0D</span></th>
+                                <th scope="row" class="break-words px-2 py-4 font-bold sm:px-4">João Silva<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">6J · 5V · 1D</span></th>
                                 <td class="break-words px-2 py-4 text-xs text-white/75 sm:px-4 sm:text-sm">Sertão Fighters</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">0</td>
-                                <td class="px-2 py-4 text-right text-lg font-extrabold sm:px-4">12</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">5</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">1</td>
+                                <td class="px-2 py-4 text-right text-lg font-extrabold sm:px-4">15</td>
                             </tr>
                             <tr>
                                 <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">2</td>
-                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Maria Costa<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">4J · 3V · 1D</span></th>
+                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Maria Costa<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">6J · 4V · 2D</span></th>
                                 <td class="break-words px-2 py-4 text-xs text-white/75 sm:px-4 sm:text-sm">Bahia Titans</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
                                 <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">3</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">1</td>
-                                <td class="px-2 py-4 text-right font-bold sm:px-4">9</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
+                                <td class="px-2 py-4 text-right font-bold sm:px-4">12</td>
                             </tr>
                             <tr>
                                 <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">3</td>
-                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Lucas Alves<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">4J · 2V · 2D</span></th>
+                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Lucas Alves<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">6J · 2V · 4D</span></th>
                                 <td class="break-words px-2 py-4 text-xs text-white/75 sm:px-4 sm:text-sm">Agreste Force</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
                                 <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">2</td>
                                 <td class="px-2 py-4 text-right font-bold sm:px-4">6</td>
                             </tr>
-                            <tr>
+                            <tr data-campaign-team="Nordeste Camp" data-matches="6" data-wins="1" data-points="3">
                                 <td class="px-2 py-4 font-semibold text-white/70 sm:px-4">4</td>
-                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Ana Souza<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">4J · 1V · 3D</span></th>
+                                <th scope="row" class="break-words px-2 py-4 font-semibold sm:px-4">Ana Souza<span class="mt-1 block text-xs font-normal text-white/60 sm:hidden">6J · 1V · 5D</span></th>
                                 <td class="break-words px-2 py-4 text-xs text-white/75 sm:px-4 sm:text-sm">Nordeste Camp</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">4</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">6</td>
                                 <td class="hidden px-4 py-4 text-center sm:table-cell">1</td>
-                                <td class="hidden px-4 py-4 text-center sm:table-cell">3</td>
+                                <td class="hidden px-4 py-4 text-center sm:table-cell">5</td>
                                 <td class="px-2 py-4 text-right font-bold sm:px-4">3</td>
                             </tr>
                         </tbody>
@@ -204,11 +207,15 @@
                 </div>
             </section>
 
+            <div class="mb-4">
+                <h3 class="text-xl font-bold">Calendário por equipes</h3>
+                <p class="mt-1 text-sm text-white/65">Seis partidas do Nordeste Camp. Os placares e cálculos desta página são demonstrativos.</p>
+            </div>
             <ol class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <li>
-                    <article data-match data-team-score="2" data-opponent-score="0" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Sertão Fighters" data-team-score="2" data-opponent-score="0" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 1</h3>
+                            <h3 class="font-bold">Rodada 1 · 1º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Sertão Fighters</p>
@@ -216,29 +223,29 @@
                     </article>
                 </li>
                 <li>
-                    <article data-match data-team-score="1" data-opponent-score="3" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Agreste Force" data-team-score="1" data-opponent-score="3" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 2</h3>
+                            <h3 class="font-bold">Rodada 2 · 1º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Agreste Force</p>
-                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 1, adversário a definir 3">1 <span class="text-base font-medium text-white/60">–</span> 3</p>
+                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 1, Agreste Force 3">1 <span class="text-base font-medium text-white/60">–</span> 3</p>
                     </article>
                 </li>
                 <li>
-                    <article data-match data-team-score="3" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Bahia Titans" data-team-score="3" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 3</h3>
+                            <h3 class="font-bold">Rodada 3 · 1º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Bahia Titans</p>
-                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 3, adversário a definir 1">3 <span class="text-base font-medium text-white/60">–</span> 1</p>
+                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 3, Bahia Titans 1">3 <span class="text-base font-medium text-white/60">–</span> 1</p>
                     </article>
                 </li>
                 <li>
-                    <article data-match data-team-score="7" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Bahia Titans" data-team-score="7" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 4</h3>
+                            <h3 class="font-bold">Rodada 4 · 2º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Bahia Titans</p>
@@ -246,23 +253,23 @@
                     </article>
                 </li>
                 <li>
-                    <article data-match data-team-score="2" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Sertão Fighters" data-team-score="2" data-opponent-score="1" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 5</h3>
+                            <h3 class="font-bold">Rodada 5 · 2º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Sertão Fighters</p>
-                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 2, adversário a definir 1">2 <span class="text-base font-medium text-white/60">–</span> 1</p>
+                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 2, Sertão Fighters 1">2 <span class="text-base font-medium text-white/60">–</span> 1</p>
                     </article>
                 </li>
                 <li>
-                    <article data-match data-team-score="3" data-opponent-score="0" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
+                    <article data-match data-opponent-team="Agreste Force" data-team-score="3" data-opponent-score="0" class="h-full rounded-xl border border-white/15 bg-white/10 p-5 shadow-lg">
                         <div class="flex items-center justify-between gap-3">
-                            <h3 class="font-bold">Rodada 6</h3>
+                            <h3 class="font-bold">Rodada 6 · 2º turno</h3>
                             <span data-match-result class="rounded-full px-3 py-1 text-sm font-semibold" aria-live="polite">Calculando...</span>
                         </div>
                         <p class="mt-4 text-sm text-white/70">Nordeste Camp <span aria-hidden="true">vs.</span><span class="sr-only">contra</span> Agreste Force</p>
-                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 3, adversário a definir 0">3 <span class="text-base font-medium text-white/60">–</span> 0</p>
+                        <p data-score-display class="mt-1 text-2xl font-extrabold" aria-label="Nordeste Camp 3, Agreste Force 0">3 <span class="text-base font-medium text-white/60">–</span> 0</p>
                     </article>
                 </li>
             </ol>
